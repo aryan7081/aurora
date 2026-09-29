@@ -8,6 +8,17 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.18 (2026-09-29)
+
+### Feature
+
+- Added Heading 5 and Heading 6 to the slash menu, the "Turn into" toolbar menu and the block context menu. @sneridagh 
+- Added a `# ` markdown shortcut that restores the title block when the page has none, like the "Title" slash menu item. With a title block present, `# ` is left as typed. @sneridagh 
+
+### Bugfix
+
+- Removed Heading 1 from the block context menu's "Turn into" submenu and from the insert toolbar menu, since H1 is reserved for the title and the editor has no H1 plugin. @sneridagh 
+
 ## 1.0.0-alpha.17 (2026-09-29)
 
 ### Breaking
