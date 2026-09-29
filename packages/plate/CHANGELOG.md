@@ -8,6 +8,28 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.17 (2026-09-29)
+
+### Breaking
+
+- Upgraded Plate.js packages to 52.x. Static rendering helpers are now imported from `platejs/static`, and the unused `@ai-sdk/google` and `@ai-sdk/openai` dependencies were removed. @sneridagh 
+- Upgraded Plate.js packages to 53.x and the AI SDK to v7. Blockquotes are now stored as containers of blocks, markdown shortcuts are configured as `inputRules` on each feature kit, and `@platejs/autoformat` was removed. The `//` to `÷` substitution was dropped, since it broke typing URLs. @sneridagh 
+
+### Feature
+
+- Added `migrateLegacyBlockquotesInValue` to convert legacy flat blockquotes into blockquote containers, also applied by `normalizeLegacyValue`. @sneridagh 
+- Removed the AI entry points (slash menu action, block context menu item and floating toolbar button) from the editor when the AI chat plugin is not part of the preset, as in Aurora's presets. @sneridagh 
+
+### Bugfix
+
+- Added accessible names to icon-only editor controls: toolbar buttons now expose their tooltip as label, list and block width split buttons, the toggle button (with `aria-expanded`) and the code block language picker are labelled. @sneridagh 
+- Fixed code blocks shrinking to fit their content in the public view, instead of spanning their default block width. @sneridagh 
+- Fixed nested blocks, like paragraphs in a blockquote, table cell or column, getting their own block width instead of filling their container. The editor now also normalizes the loaded value, which restores the trailing paragraph after the title. @sneridagh 
+
+### Internal
+
+- Added acceptance tests for the native blocks of Aurora's presets (slash menu, floating toolbar, block context menu, block interactions and Word, HTML and markdown paste), with programmatic test page fixtures. @sneridagh 
+
 ## 1.0.0-alpha.16 (2026-09-21)
 
 ### Bugfix
