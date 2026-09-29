@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.9 (2026-09-29)
+
+### Internal
+
+- Covered Heading 2 to Heading 6 in the block width acceptance test for headings created with markdown shortcuts. @sneridagh 
+
 ## 1.0.0-alpha.8 (2026-09-29)
 
 ### Feature
