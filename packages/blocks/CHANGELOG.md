@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.15 (2026-09-29)
+
+### Feature
+
+- Added Maps block. @cihanandac 
+
 ## 1.0.0-alpha.14 (2026-09-21)
 
 ### Internal
