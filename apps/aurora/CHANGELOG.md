@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.12 (2026-09-29)
+
+### Internal
+
+- Use updated @plone/plate. @sneridagh 
+
 ## 1.0.0-alpha.11 (2026-09-29)
 
 ### Feature
