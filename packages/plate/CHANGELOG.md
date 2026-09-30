@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.19 (2026-09-30)
+
+### Bugfix
+
+- Fixed dragging a Plone block (e.g. an image) in the editor deleting it instead of moving it: the void block element now renders its children, so Slate can resolve the spacer text when it copies the block into the drag data. @sneridagh 
+- Fixed pasted or dropped images vanishing from the editor after the upload: in the `somersault-editor` preset, pasting or dropping image files now uploads them and inserts Plone image blocks, instead of image nodes that no editor kit renders. @sneridagh 
+
 ## 1.0.0-alpha.18 (2026-09-29)
 
 ### Feature
