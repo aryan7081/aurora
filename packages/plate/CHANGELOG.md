@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.20 (2026-09-30)
+
+### Feature
+
+- Added Cut, Copy and Paste to the block context menu, and reordered its actions. @sneridagh 
+
 ## 1.0.0-alpha.19 (2026-09-30)
 
 ### Bugfix
