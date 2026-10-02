@@ -48,6 +48,8 @@ function isAll(keys: unknown): keys is 'all' {
 const DEFAULT_DEPTH = 'path.depth=1';
 const DEFAULT_METADATA_FIELDS = 'metadata_fields:list=is_folderish';
 
+function normalizeObjectBrowserPath(currentPath: string): string;
+function normalizeObjectBrowserPath(currentPath?: string): string | undefined;
 function normalizeObjectBrowserPath(currentPath?: string): string | undefined {
   return getContentPathFromCmsUrl(currentPath);
 }

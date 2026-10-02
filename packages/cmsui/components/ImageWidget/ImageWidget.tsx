@@ -163,7 +163,7 @@ function getBasePath(path: string) {
 }
 
 function getEditPathFromUrl(pathname: string) {
-  return normalizeObjectBrowserPath(pathname) || '/';
+  return normalizeObjectBrowserPath(pathname);
 }
 
 function readFileAsDataURL(file: File) {
@@ -190,8 +190,8 @@ async function fetchExistingImageAsBlob(
   contentId: string,
   filename: string,
 ): Promise<NamedBlobImage | null> {
-  const path = contentId.startsWith('/') ? contentId : `/${contentId}`;
-  const response = await fetch(`${path}/@@download/image`, {
+  // Object-browser brains are flattened to app paths (always leading `/`).
+  const response = await fetch(`${contentId}/@@download/image`, {
     credentials: 'include',
   });
   if (!response.ok) return null;

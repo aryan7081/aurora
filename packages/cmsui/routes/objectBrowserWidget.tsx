@@ -14,7 +14,7 @@ export async function loader({
 }: LoaderFunctionArgs<RouterContextProvider>) {
   const cli = context.get(ploneClientContext);
 
-  const path = getContentPathFromCmsUrl(`/${params['*'] || ''}`) || '/';
+  const path = getContentPathFromCmsUrl(`/${params['*'] || ''}`);
 
   const query = Object.fromEntries(new URL(request.url).searchParams.entries());
 

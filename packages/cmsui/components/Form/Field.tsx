@@ -12,6 +12,7 @@ import { useFieldFocusedAtom } from '@plone/helpers';
 import { useFieldContext } from './Form';
 import { type PrimitiveAtom } from 'jotai';
 import { type DeepKeys } from '@tanstack/react-form';
+import { useTranslation } from 'react-i18next';
 
 interface BaseFieldProps {
   id?: keyof WidgetsConfigById;
@@ -160,9 +161,11 @@ const getWidgetByType = (
 const renderFieldWidget = ({
   fieldProps,
   onFieldChange,
+  defaultPlaceholder,
 }: {
   fieldProps: FieldProps;
   onFieldChange: (value: any) => void;
+  defaultPlaceholder: string;
 }) => {
   const Widget =
     getWidgetByFieldId(
@@ -204,7 +207,7 @@ const renderFieldWidget = ({
       typeof extraFieldProps.description === 'string'
         ? extraFieldProps.description
         : undefined,
-    placeholder: fieldProps.placeholder || 'Type something...',
+    placeholder: fieldProps.placeholder || defaultPlaceholder,
     value: fieldProps.value,
     defaultValue: fieldProps.defaultValue,
     required: fieldProps.required,
@@ -236,6 +239,7 @@ const renderFieldWidget = ({
 };
 
 const AtomField = (props: AtomFieldProps) => {
+  const { t } = useTranslation();
   const field = useFieldContext();
   const value = field.state.value;
 
@@ -254,6 +258,7 @@ const AtomField = (props: AtomFieldProps) => {
 
   return renderFieldWidget({
     fieldProps: props,
+    defaultPlaceholder: t('cmsui.form.typeSomething'),
     onFieldChange: (value: any) => {
       setField(value);
       return field.handleChange(value);
@@ -262,10 +267,12 @@ const AtomField = (props: AtomFieldProps) => {
 };
 
 const FormField = (props: FormFieldProps) => {
+  const { t } = useTranslation();
   const field = useFieldContext();
 
   return renderFieldWidget({
     fieldProps: props,
+    defaultPlaceholder: t('cmsui.form.typeSomething'),
     onFieldChange: (value: any) => field.handleChange(value),
   });
 };

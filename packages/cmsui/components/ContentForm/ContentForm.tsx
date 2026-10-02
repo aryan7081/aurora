@@ -53,7 +53,7 @@ export default function ContentForm({
   const fetcher = useFetcher();
   const location = useLocation();
   const cancelHref =
-    content['@id'] || getContentPathFromCmsUrl(location.pathname) || '/';
+    content['@id'] || getContentPathFromCmsUrl(location.pathname);
   const storeRef = useRef(createStore());
   const store = storeRef.current;
   const [collapsed, setCollapsed] = useAtom(sidebarAtom);
