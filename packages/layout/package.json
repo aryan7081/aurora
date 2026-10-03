@@ -58,8 +58,10 @@
   },
   "dependencies": {
     "@plone/components": "workspace:*",
+    "@plone/icons": "workspace:*",
     "@plone/helpers": "workspace:*",
     "@plone/plate": "workspace:*",
+    "@plone/quanta": "workspace:*",
     "@plone/registry": "workspace:*",
     "clsx": "^2.1.1",
     "lodash.sortby": "^4.7.0",
