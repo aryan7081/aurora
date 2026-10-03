@@ -1,2 +1,0 @@
-Scan the `@plone/quanta` build for Tailwind classes, instead of the Quanta build in `@plone/components`. @pnicolli
-Scan `@plone/icons` for Tailwind classes, so every icon size utility is generated. @pnicolli
