@@ -13,7 +13,7 @@ import {
   LinkIcon,
   VideoIcon,
   CollectionIcon,
-} from '@plone/components/Icons';
+} from '@plone/icons';
 import { getContentPathFromCmsUrl } from '../../helpers/cmsPath';
 
 export interface ContentIconMap {
