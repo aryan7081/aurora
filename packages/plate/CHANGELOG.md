@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.24 (2026-10-06)
+
+### Internal
+
+- Removed the unused `@plone/quanta` peer and dev dependency. @sneridagh 
+
 ## 1.0.0-alpha.23 (2026-10-06)
 
 ### Bugfix
