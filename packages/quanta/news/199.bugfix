@@ -1,1 +1,0 @@
-Fixed the quanta table row drag handle relying on a global CSS reset to drop the basic button styles. @sneridagh
