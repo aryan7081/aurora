@@ -8,6 +8,15 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.19 (2026-10-06)
+
+### Documentation
+
+- Documented the content styles loader, its authoring rules, and how to override block styles from an add-on. @sneridagh [#199](https://github.com/plone/aurora/issues/199)
+- Documented the block content classname contract for themers. @sneridagh [#200](https://github.com/plone/aurora/issues/200)
+- Added the block content CSS changes of plone/aurora#199 and plone/aurora#200 to the upgrade guide. @sneridagh 
+- Added the how-to guide "Style blocks in a theme", with every block's parts and tokens, and fixed the content styles examples in the add-on styles loader and block anatomy docs. @sneridagh 
+
 ## 1.0.0-alpha.18 (2026-10-06)
 
 ### Internal
