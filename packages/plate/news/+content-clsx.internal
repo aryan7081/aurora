@@ -1,1 +1,0 @@
-`BlockInnerContainer` merges its classes with `clsx` instead of the Tailwind-aware `cn`, since block content no longer uses Tailwind utilities. @sneridagh
