@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.17 (2026-10-06)
+
+### Internal
+
+- Upgrade to use latest @plone/plate. @sneridagh 
+
 ## 1.0.0-alpha.16 (2026-10-03)
 
 ### Bugfix
