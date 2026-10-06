@@ -1,1 +1,0 @@
-Added the `styles/content.css` add-on styles convention: every add-on's content styles are aggregated into `.plone/content.css`, which both the Public UI and the CMSUI loaders import first, inside the `plone-content` cascade layer. @sneridagh
