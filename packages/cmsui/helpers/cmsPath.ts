@@ -1,15 +1,7 @@
 /**
  * Map CMS UI routes (`/@@add`, `/@@edit/...`) to the content path they act on.
  */
-export function getContentPathFromCmsUrl(currentPath: string): string;
-export function getContentPathFromCmsUrl(
-  currentPath?: string,
-): string | undefined;
-export function getContentPathFromCmsUrl(
-  currentPath?: string,
-): string | undefined {
-  if (!currentPath) return undefined;
-
+export function getContentPathFromCmsUrl(currentPath: string): string {
   let path = currentPath.split('?')[0].split('#')[0] || '/';
   if (!path.startsWith('/')) path = `/${path}`;
 

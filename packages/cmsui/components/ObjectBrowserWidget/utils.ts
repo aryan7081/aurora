@@ -48,9 +48,7 @@ function isAll(keys: unknown): keys is 'all' {
 const DEFAULT_DEPTH = 'path.depth=1';
 const DEFAULT_METADATA_FIELDS = 'metadata_fields:list=is_folderish';
 
-function normalizeObjectBrowserPath(currentPath: string): string;
-function normalizeObjectBrowserPath(currentPath?: string): string | undefined;
-function normalizeObjectBrowserPath(currentPath?: string): string | undefined {
+function normalizeObjectBrowserPath(currentPath: string): string {
   return getContentPathFromCmsUrl(currentPath);
 }
 
@@ -66,8 +64,8 @@ function buildObjectBrowserUrl(
     return `/@objectBrowserWidget?${DEFAULT_METADATA_FIELDS}${searchParam}`;
   }
 
+  if (!currentPath) return null;
   const path = normalizeObjectBrowserPath(currentPath);
-  if (!path) return null;
 
   if (path === '/') {
     return `/@objectBrowserWidget?${DEFAULT_DEPTH}&${DEFAULT_METADATA_FIELDS}`;
